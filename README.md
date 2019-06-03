@@ -4,8 +4,7 @@ Posterior sampling (from the paper "[Deep Bayesian Inversion](https://arxiv.org/
 ## Problem Formulation
 The code here is to solve an inverse problem by conditional WGAN. The optimization problem can be defined below.
 
-<img src="http://latex.codecogs.com/gif.latex\\inf_{\theta \in \Theta}
-\sup_{\substack{\phi \in \Phi \\\parallel \partial_\mathbf{x} D_{\phi}(\mathbf{x},\mathbf{y}) \parallel_2 \leq 1}}\mathbb{E}_{\substack{(\mathbf{x},\mathbf{y}) \thicksim \mu\\z \thicksim \eta}}[D_\phi(\mathbf{x},\mathbf{y})- D_\phi(G_{\theta}\mathbf{(z,y)},\mathbf{y})] " />
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inf_{\theta&space;\in&space;\Theta}&space;\sup_{\substack{\phi&space;\in&space;\Phi&space;\\\parallel&space;\partial_\mathbf{x}&space;D_{\phi}(\mathbf{x},\mathbf{y})&space;\parallel_2&space;\leq&space;1}}\mathbb{E}_{\substack{(\mathbf{x},\mathbf{y})&space;\thicksim&space;\mu\\z&space;\thicksim&space;\eta}}[D_\phi(\mathbf{x},\mathbf{y})-&space;D_\phi(G_{\theta}\mathbf{(z,y)},\mathbf{y})]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inf_{\theta&space;\in&space;\Theta}&space;\sup_{\substack{\phi&space;\in&space;\Phi&space;\\\parallel&space;\partial_\mathbf{x}&space;D_{\phi}(\mathbf{x},\mathbf{y})&space;\parallel_2&space;\leq&space;1}}\mathbb{E}_{\substack{(\mathbf{x},\mathbf{y})&space;\thicksim&space;\mu\\z&space;\thicksim&space;\eta}}[D_\phi(\mathbf{x},\mathbf{y})-&space;D_\phi(G_{\theta}\mathbf{(z,y)},\mathbf{y})]" title="\inf_{\theta \in \Theta} \sup_{\substack{\phi \in \Phi \\\parallel \partial_\mathbf{x} D_{\phi}(\mathbf{x},\mathbf{y}) \parallel_2 \leq 1}}\mathbb{E}_{\substack{(\mathbf{x},\mathbf{y}) \thicksim \mu\\z \thicksim \eta}}[D_\phi(\mathbf{x},\mathbf{y})- D_\phi(G_{\theta}\mathbf{(z,y)},\mathbf{y})]" /></a
 
 Actually, this loss might cause mode collapse and the implementation is different from the loss function. For more details, please refer to [Deep Bayesian Inversion](https://arxiv.org/abs/1811.05910).
 
